@@ -1,1 +1,1 @@
-export const ONE_API = 'ONE_API'; 
+export const SET_RANDOM_RECIPE = 'SET_RANDOM_RECIPE'; 

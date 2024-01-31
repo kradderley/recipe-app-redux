@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 import { apiRandomRecipeKey } from "../../secret";
 
 const Home = () => {
-  // const api = process.env.REACT_APP_API_KEY_ONE;
 
   const getData = async () => {
     const { data } = await axios.get(
@@ -14,7 +14,11 @@ const Home = () => {
 
   getData();
 
-  return <> </>;
+  return (
+    <>
+      <h1>Data</h1>
+    </>
+  );
 };
 
 export default Home;

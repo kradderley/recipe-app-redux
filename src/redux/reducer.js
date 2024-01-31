@@ -1,12 +1,18 @@
 import { initialState } from "./initialState";
-import { ONE_API } from "./types";
+import { SET_RANDOM_RECIPE } from "./types";
 
 export const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ONE_API:
-      break;
+  const { type, payload } = action;
+
+  switch (type) {
+    case SET_RANDOM_RECIPE:
+      return {
+        ...state,
+        recipes: payload,
+      };
 
     default:
+      console.log("Reducer ran");
       return initialState;
   }
 };
